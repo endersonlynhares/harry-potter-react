@@ -1,0 +1,77 @@
+.main{
+    background: url('../../assets/background_azul.webp');
+    background-size: cover;
+    
+    margin-top: -65px;
+
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    padding: 25px;
+}
+
+
+/* TUDO RELACIONADO A PARTE DE CARDS */
+
+.main img{
+    max-width: 1200px;
+    width: 100%;
+}
+
+.section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardGroup{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+
+    flex-direction: row;
+    gap: 45px;
+}
+
+.card{
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #E23F3F;
+    border: 3px solid #E23F3F;
+    padding: 20px;
+}
+
+.card h4{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.imageCard{
+    width: 120px;
+    height: 140px;
+}
+
+.imageCard img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+section + section{
+    margin-top: 40px;
+}
