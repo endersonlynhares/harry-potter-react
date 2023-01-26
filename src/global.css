@@ -1,5 +1,10 @@
 :root{
     --dark-blue-900: #0E1D26;
+
+    --gray-800: #2B2A2A;
+    --gray-500: #7C7C8A;
+
+    --white: #ffffff;
 }
 
 *{
