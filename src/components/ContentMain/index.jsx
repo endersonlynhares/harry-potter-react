@@ -1,89 +1,22 @@
-import styled from "./index.module.css"
-import initSection from "../../assets/section-init.svg"
-import sectionGrifinoria from "../../assets/section-grifinoria.svg"
-import sectionSonserina from "../../assets/section-sonserina.svg"
-import rony from "../../assets/rony_weasley.png"
+import styled from "./index.module.css";
+import initSection from "../../assets/section_initial.svg";
+import { SectionHouse } from "../SectionHouse";
 
-export const ContentMain = () =>{
-    return(
-        <main className={styled.main}>
-            <img src={initSection} alt="" />
-
-            <section className={styled.section}>
-                <img src={sectionGrifinoria} alt="" />
-                <div className={styled.cardGroup}>
-                    <div className={styled.card}>
-                        <div className={styled.imageCard}>
-                            <img src={rony} alt=""/>
-                        </div>
-                        <h4>Rony Weasley</h4>
-                    </div>
-                    <div className={styled.card}>
-                        <div className={styled.imageCard}>
-                            <img src={rony} alt=""/>
-                        </div>
-                        <h4>Rony Weasley</h4>
-                    </div>
-                    <div className={styled.card}>
-                        <div className={styled.imageCard}>
-                            <img src={rony} alt=""/>
-                        </div>
-                        <h4>Rony Weasley</h4>
-                    </div>
-                    <div className={styled.card}>
-                        <div className={styled.imageCard}>
-                            <img src={rony} alt=""/>
-                        </div>
-                        <h4>Rony Weasley</h4>
-                    </div>
-                    <div className={styled.card}>
-                        <div className={styled.imageCard}>
-                            <img src={rony} alt=""/>
-                        </div>
-                        <h4>Rony Weasley</h4>
-                    </div>
-                    
-                    
-                </div>
-            </section>
-
-            <section className={styled.section}>
-                <img src={sectionSonserina} alt="" />
-                <div className={styled.cardGroup}>
-                    <div style={{'borderColor': "green"}} className={styled.card}>
-                        <div className={styled.imageCard}>
-                            <img src={"https://i.pinimg.com/originals/e2/b0/e7/e2b0e70f3627ce10d9faa701c9612148.jpg"} alt=""/>
-                        </div>
-                        <h4 style={{'color': "green"}}>Rony Weasley</h4>
-                    </div>
-                    <div style={{'borderColor': "green"}} className={styled.card}>
-                        <div className={styled.imageCard}>
-                        <img src={"https://i.pinimg.com/originals/e2/b0/e7/e2b0e70f3627ce10d9faa701c9612148.jpg"} alt=""/>
-                        </div>
-                        <h4 style={{'color': "green"}}>Rony Weasley</h4>
-                    </div>
-                    <div style={{'borderColor': "green"}} className={styled.card}>
-                        <div className={styled.imageCard}>
-                        <img src={"https://i.pinimg.com/originals/e2/b0/e7/e2b0e70f3627ce10d9faa701c9612148.jpg"} alt=""/>
-                        </div>
-                        <h4 style={{'color': "green"}}>Rony Weasley</h4>
-                    </div>
-                    <div style={{'borderColor': "green"}} className={styled.card}>
-                        <div className={styled.imageCard}>
-                        <img src={"https://i.pinimg.com/originals/e2/b0/e7/e2b0e70f3627ce10d9faa701c9612148.jpg"} alt=""/>
-                        </div>
-                        <h4 style={{'color': "green"}}>Rony Weasley</h4>
-                    </div>
-                    <div style={{'borderColor': "green"}} className={styled.card}>
-                        <div className={styled.imageCard}>
-                        <img src={"https://i.pinimg.com/originals/e2/b0/e7/e2b0e70f3627ce10d9faa701c9612148.jpg"} alt=""/>
-                        </div>
-                        <h4 style={{'color': "green"}}>Rony Weasley</h4>
-                    </div>
-                    
-                    
-                </div>
-            </section>
-        </main>
-    )
-}
+export const ContentMain = ({houses = [], cards = []}) => {
+  return (
+    <main className={styled.main}>
+      <img className={styled.imageInit} src={initSection} alt="" />
+      <hr />
+      {houses.map((house) => {
+        return (
+          <SectionHouse
+            key={house.house}
+            commonColor={house.styleHouse}
+            src={house.srcHouseImage}
+            cards={cards.filter((card) => card.house == house.house)}
+          />
+        );
+      })}
+    </main>
+  );
+};

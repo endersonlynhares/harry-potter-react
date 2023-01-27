@@ -1,33 +1,3 @@
-.main{
-    background: url('../../assets/background_azul.webp');
-    
-    
-    margin-top: -65px;
-
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    padding: 25px;
-}
-
-
-/* TUDO RELACIONADO A PARTE DE CARDS */
-
-.main img{
-    max-width: 1200px;
-    width: 100%;
-}
-
-.imageInit{
-    margin-bottom: 20px;
-}
-
-
 .cardGroup{
     flex: 1;
     display: flex;
@@ -42,7 +12,8 @@
 }
 
 .card{
-    max-width: 200px;
+    font-size: 1rem;
+    width: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,11 +21,13 @@
     color: #E23F3F;
     border: 3px solid #E23F3F;
     padding: 20px;
+    border-radius: 7px;
 }
 
 .card h4{
     margin-top: 20px;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .imageCard{
