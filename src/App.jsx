@@ -3,41 +3,12 @@ import { ContentMain } from './components/ContentMain';
 
 import sectionGrifinoria from "./assets/section-grifinoria.svg";
 import sectionSonserina from "./assets/section-sonserina.svg";
-import sectionLufaLufa from "./assets/section-lufa-lufa.svg";
+import sectionLufaLufa from "./assets/section-lufa-lufa-1.svg";
 import sectionCorvinal from "./assets/section-corvinal.svg";
 import rony from "./assets/rony_weasley.png";
-
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.css'
-
-
-const cards = [
-  {
-    name: "Rony Weasley",
-    house: "corvinal",
-    srcImage: rony,
-  },
-  {
-    name: "Rony dadasds",
-    house: "sonserina",
-    srcImage: rony,
-  },
-  {
-    name: "Draco",
-    house: "grifinoria",
-    srcImage: rony,
-  },
-  {
-    name: "Rony as",
-    house: "corvinal",
-    srcImage: rony,
-  },
-  {
-    name: "dadsadas",
-    house: "sonserina",
-    srcImage: rony,
-  },
-];
 
 const houses = [
   {
@@ -68,18 +39,25 @@ const houses = [
     house: "lufa-lufa",
     srcHouseImage: sectionLufaLufa,
     styleHouse: {
-      borderColor: "var(--yellow-common-house)",
-      color: "var(--yellow-common-house)",
+      borderColor: "var(--yellow-commom-house)",
+      color: "var(--yellow-commom-house)",
     },
   },
 ];
 
 
 function App() {
+
+  const [cardsHouse, setCardsHouse] = useState([])
+  
+  const addCard = (card) =>{
+    setCardsHouse([...cardsHouse, card])
+  }
+
   return(
     <div className="app">
-      <ContentHeader />
-      <ContentMain houses={houses} cards={cards} />
+      <ContentHeader addCard={addCard}/>
+      <ContentMain houses={houses} cards={cardsHouse}  />
     </div>
   )  
 }
