@@ -14,7 +14,7 @@
 .card{
     overflow: hidden;
     font-size: 1rem;
-    width: 180px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,19 +26,18 @@
 }
 
 .card h4{
-    margin-top: 20px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .imageCard{
-    width: 120px;
-    height: 140px;
+    margin-bottom: 20px;
+    width: 90px;
 }
 
 .imageCard img{
     width: 100%;
-    height: 150px;
+    height: 100px;
     object-fit: cover;
     border-radius: 5px;
 }
